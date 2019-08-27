@@ -1,13 +1,12 @@
 const HDWalletProvider = require("truffle-hdwallet-provider");
 const path = require('path');
-require('dotenv').config({ path: path.join(__dirname, '../.env') })
+require('dotenv').config({ path: path.join(__dirname, '../eth.env') })
 
 const INFURA_KEY = process.env.INFURA_KEY;
 const MNEMONIC = process.env.MNEMONIC;
 
 if (!MNEMONIC || !INFURA_KEY) {
-  console.error("Please set a mnemonic and infura key.")
-  return
+  console.error("############ Please set a mnemonic and infura key! ############")
 }
 
 module.exports = {

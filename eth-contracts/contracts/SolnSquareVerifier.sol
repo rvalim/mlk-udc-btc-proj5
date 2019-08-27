@@ -35,8 +35,8 @@ contract SolnSquareVerifier is CustomERC721Token {
     //  - make sure the solution is unique (has not been used before)
     //  - make sure you handle metadata as well as tokenSuplly
     function mintVerified(address to, uint tokenId)
-    onlyOwner
     public
+    onlyOwner
     {
         Solution memory solution = addressToSolution[to];
         require(solution.hash > 0, "Solution does not exist");
@@ -60,8 +60,8 @@ contract SolnSquareVerifier is CustomERC721Token {
         uint[2] memory k,
         uint[2] memory input
     )
-    onlyOwner
     public
+    onlyOwner
     {
         bool isValid = verifier_.verifyTx(a, a_p, b, b_p, c, c_p, h, k, input);
         require(isValid == true, "Solution is not valid");
