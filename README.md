@@ -47,10 +47,10 @@ First of all you have to install somethings. =D
 
 The file needs to be created on root project with the name **eth.env**, the structure goes bellow:
 
-INFURA_KEY="<INFURA_KEY>"
-MNEMONIC="<WALLET_MNEMONIC>"
-OWNER_ADDRESS="<CONTRACT_OWNER>"
-NETWORK="development"
+    INFURA_KEY="<INFURA_KEY>"
+    MNEMONIC="<WALLET_MNEMONIC>"
+    OWNER_ADDRESS="<CONTRACT_OWNER>"
+    NETWORK="development"
 
 ### Creating Zokrates proofs
 
