@@ -12,10 +12,10 @@ if (!MNEMONIC || !INFURA_KEY) {
 module.exports = {
   networks: {
     development: {
-      host: "localhost",
+      host: "127.0.0.1",
       port: 8545,
-      gas: 4600000,
-      network_id: "*" // Match any network id
+      network_id: "*",
+      websockets: true
     },
     rinkeby: {
       provider: function () {
@@ -25,7 +25,8 @@ module.exports = {
         );
       },
       network_id: "*",
-      gas: 4000000
+      gas: 7000000,
+      gasPrice: 10000000000
     }
   },
   compilers: {
