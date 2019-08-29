@@ -13,6 +13,13 @@ function loadProofs() {
     return PROOFS.map(p => JSON.parse(fs.readFileSync(path.join(__dirname, p), "utf-8")))
 }
 
+function loadBadProofs(proofs) {
+    return {
+            ...proofs[0],
+            "inputs": [proofs[0].inputs[1], proofs[0].inputs[1]]
+        }
+}
+
 function genToken(accounts) {
     let tokens = []
     for (let i = 1; i <= NUM_TOKENS; i++) {
@@ -22,13 +29,17 @@ function genToken(accounts) {
 }
 
 module.exports = function (accounts, web3){
-    var config ={
+    const good = loadProofs();
+    const bad = loadBadProofs(good);
+
+    const config ={
         address: {
             owner: accounts[0],
             whomever: accounts[9]
         },
         proofs: {
-            good: loadProofs()
+            good,
+            bad
         },
         tokens: genToken(accounts)
     }
