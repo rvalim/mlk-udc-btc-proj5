@@ -1,5 +1,3 @@
-const util = require("util");
-const url = require("url");
 const path = require("path");
 const fs = require("fs");
 const NUM_TOKENS = 5;

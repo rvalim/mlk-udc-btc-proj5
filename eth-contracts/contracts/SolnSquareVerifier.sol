@@ -66,8 +66,8 @@ contract SolnSquareVerifier is ERC721Metadata {
     public
     onlyOwner
     {
-        // bool isValid = verifier_.verifyTx(a, a_p, b, b_p, c, c_p, h, k, input);
-        // require(isValid == true, "Solution is not valid");
+        bool isValid = verifier_.verifyTx(a, a_p, b, b_p, c, c_p, h, k, input);
+        require(isValid == true, "Solution is not valid");
 
         bytes32 token = genToken(a, a_p, b, b_p, c, c_p, h, k, input);
         require(uniqueSolutions[token].submitterAddress == address(0), "Solution exists already");
