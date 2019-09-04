@@ -30,17 +30,17 @@ First of all you have to install somethings. =D
 ├── ...
 ├── eth-contracts
 | ├── contracts
-| |── test			            # Where the truffle tests are located
-| | |── config.js				# A helper file for the tests
+| |── test                      # Where the truffle tests are located
+| | |── config.js               # A helper file for the tests
 | | └── ...
-| |── truffle-config.js 		# Configuration for development and rinkeby network
+| |── truffle-config.js         # Configuration for development and rinkeby network
 | └── ...
 | ├── script
-| | └── mint.js					# Script for minting new tokens
+| | └── mint.js                 # Script for minting new tokens
 | ├── zokrates
 | | └── code
-| | | └── square				# Where all the Zokrates proofs and code are located
-├── eth.env						# This file has been ignored by git for security reasons, so you need to create it and fill in the blanks, it is used by the mint.js
+| | | └── square                # Where all the Zokrates proofs and code are located
+├── eth.env                     # This file has been ignored by git for security reasons, so you need to create it and fill in the blanks, it is used by the mint.js
 └── ...
 ```
 ### Creating .env file
